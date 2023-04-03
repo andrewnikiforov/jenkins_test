@@ -1,6 +1,6 @@
-pipeline{
-    agent{
-    	label 'masterLin'
+pipeline{ 
+    agent{ 
+        label 'masterLin'
     }
     stages{
     	stage('Hello stage'){
@@ -10,9 +10,8 @@ pipeline{
     	}
         stage('Environment vars'){
             steps{
-                echo 'env'
+               sh 'env'
             }
-        }
     }
     post{
     	always{
