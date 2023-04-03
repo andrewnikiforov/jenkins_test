@@ -10,7 +10,7 @@ pipeline{
     	}
         stage('Environment vars'){
             steps{
-               sh "${curentBuild}"
+               echo "${curentBuild}"
             }
     }
     post{
