@@ -9,7 +9,9 @@ pipeline{
     	    }
     	}
         stage('Environment vars'){
-            echo 'env'
+            steps{
+                echo 'env'
+            }
         }
     }
     post{
