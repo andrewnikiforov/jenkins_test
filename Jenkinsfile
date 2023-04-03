@@ -1,17 +1,17 @@
 pipeline{
     agent{
-	label 'masterLin'
+    	label 'masterLin'
     }
     stages{
-	stage('Hello stage'){
-	    steps{
-		echo 'Hello world!'
-	    }
-	}
+    	stage('Hello stage'){
+    	    steps{
+        		echo 'Hello world!'
+    	    }
+    	}
     }
     post{
-	always{
-	    cleanWs()
-	}	
+    	always{
+    	    cleanWs()
+    	}	
     }
 }
