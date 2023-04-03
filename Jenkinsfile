@@ -8,6 +8,9 @@ pipeline{
         		echo 'Hello world!'
     	    }
     	}
+        stage('Environment vars'){
+            echo 'env'
+        }
     }
     post{
     	always{
