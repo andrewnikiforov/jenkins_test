@@ -12,6 +12,7 @@ pipeline{
             steps{
                echo "${curentBuild}"
             }
+        }
     }
     post{
     	always{
