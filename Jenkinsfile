@@ -27,6 +27,7 @@ pipeline{
                     }
                 }
            steps{
+               echo "Who proceeded = ${PERSON}}"
                echo "${currentBuild.number}"
             }
         }
