@@ -3,13 +3,13 @@ pipeline{
         label 'masterLin'
     }
 
-// this block strted job second_job if end in Success mode
-    triggers{
-        upstream (
-            upstreamProjects: 'my_folder/second_job',
-            threshold: hudson.model.Result.SUCCESS
-        )
-    }
+// this block strted job when  second_job end in Success mode
+//    triggers{
+//        upstream (
+//            upstreamProjects: 'my_folder/second_job',
+//            threshold: hudson.model.Result.SUCCESS
+//        )
+//    }
     stages{
     	stage('Hello stage'){
     	    steps{
