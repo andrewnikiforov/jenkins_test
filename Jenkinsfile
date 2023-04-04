@@ -15,7 +15,7 @@ pipeline{
     stages{
     	stage('Hello stage'){
             when {
-                branch 'master'
+                branch 'develop'
             }
     	    steps{
         		echo 'Hello world!'
@@ -26,11 +26,16 @@ pipeline{
                 input {
                     message "Should we continue?"
                     ok "Yes, we should."
-                    submitter "omillan"
                     parameters {
                         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                     }
                 }
+            environment{
+                MY_ENV = $PERSON
+            }
+           when {
+                environment name: 'MY_ENV', value: 'omillan'
+            }
            steps{
                echo "Who proceeded = ${PERSON}}"
                echo "${currentBuild.number}"
