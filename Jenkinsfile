@@ -31,7 +31,7 @@ pipeline{
                     }
                 }
             environment{
-                MY_ENV = $PERSON
+                MY_ENV = "$PERSON"
             }
            when {
                 environment name: 'MY_ENV', value: 'omillan'
