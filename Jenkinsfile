@@ -14,11 +14,12 @@ pipeline{
     	stage('Hello stage'){
     	    steps{
         		echo 'Hello world!'
+                input 'Will you go for award?'
     	    }
     	}
         stage('Environment vars'){
             steps{
-               echo "${currentBuild}"
+               echo "${currentBuild.ID}"
             }
         }
     }
