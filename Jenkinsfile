@@ -19,7 +19,7 @@ pipeline{
     	}
         stage('Environment vars'){
             steps{
-               echo "${currentBuild.ID}"
+               echo "${currentBuild.number}"
             }
         }
     }
