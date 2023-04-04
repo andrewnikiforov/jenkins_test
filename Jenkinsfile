@@ -18,7 +18,15 @@ pipeline{
     	    }
     	}
         stage('Environment vars'){
-            steps{
+           steps{
+                input {
+                    message "Should we continue?"
+                    ok "Yes, we should."
+                    submitter "omillan"
+                    parameters {
+                        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                    }
+                }
                echo "${currentBuild.number}"
             }
         }
