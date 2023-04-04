@@ -14,6 +14,9 @@ pipeline{
 //    }
     stages{
     	stage('Hello stage'){
+            when {
+                branch 'master'
+            }
     	    steps{
         		echo 'Hello world!'
                 input 'Will you go for award?'
