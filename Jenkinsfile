@@ -15,7 +15,7 @@ pipeline{
     stages{
     	stage('Hello stage'){
             when {
-                branch 'develop'
+                branch 'master'
             }
     	    steps{
         		echo 'Hello world!'
