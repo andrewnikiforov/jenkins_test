@@ -6,7 +6,7 @@ pipeline{
 // this block strted job second_job if end in Success mode
 //    triggers{
 //        upstream (
-//            upstreamProjects: 'second_job',
+//            upstreamProjects: 'my_folder/second_job',
 //            threshold: hudson.model.Result.SUCCESS
 //        )
 //    }
