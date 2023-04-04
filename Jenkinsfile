@@ -2,7 +2,9 @@ pipeline{
     agent{ 
         label 'masterLin'
     }
-
+    options { 
+        timestamps()
+    }
 // this block strted job when  second_job end in Success mode
 //    triggers{
 //        upstream (
