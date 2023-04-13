@@ -31,7 +31,7 @@ pipeline{
 //                MY_ENV = "${PERSON}"
             }
             when {
-                environment name: 'MY_ENV', value: 'omillan'
+                environment name: 'PERSON', value: 'omillan'
             }
             steps{
                 echo "Who proceeded = ${MY_ENV}"
