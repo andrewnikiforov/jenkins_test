@@ -15,9 +15,9 @@ pipeline{
 //    }
     stages{
     	stage('Hello stage'){
-//            when {
-//                branch 'origin/develop'
-//            }
+            when {
+                branch 'origin/develop'
+            }
     	    steps{
                 sh 'printenv'
                 echo "Branch is ${env.GIT_BRANCH}"
@@ -36,9 +36,9 @@ pipeline{
             environment{
                 MY_ENV = "${PERSON}"
             }
-//           when {
-//                environment name: 'MY_ENV', value: 'omillan'
-//            }
+           when {
+                environment name: 'MY_ENV', value: 'omillan'
+            }
            steps{
                echo "Who proceeded = ${MY_ENV}"
                echo "${currentBuild.number}"
