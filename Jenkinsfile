@@ -1,3 +1,5 @@
+def 
+
 pipeline{ 
     agent{ 
         label 'masterLin'
