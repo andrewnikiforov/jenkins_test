@@ -26,22 +26,22 @@ pipeline{
     	    }
     	}
         stage('Environment vars'){
-                input {
-                    message "Should we continue?"
-                    ok "Yes, we should."
-                    parameters {
-                        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-                    }
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                parameters {
+                   string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                 }
+            }
             environment{
                 MY_ENV = "${PERSON}"
             }
-           when {
+            when {
                 environment name: 'MY_ENV', value: 'omillan'
             }
-           steps{
-               echo "Who proceeded = ${MY_ENV}"
-               echo "${currentBuild.number}"
+            steps{
+                echo "Who proceeded = ${MY_ENV}"
+                echo "${currentBuild.number}"
             }
         }
     }
