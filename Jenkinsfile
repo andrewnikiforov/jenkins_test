@@ -7,7 +7,7 @@ pipeline{
     }
     stages{
     	stage('Hello stage'){
-            when { { branch 'origin/develop' } }
+            when { branch 'origin/develop'  }
 //            when {
 //                branch not '*/develop'
 //            }
