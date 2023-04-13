@@ -23,7 +23,7 @@ pipeline{
                 message "Should we continue?"
                 ok "Yes, we should."
                 parameters {
-                   string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                   string(name: 'PERSON', defaultValue: 'MrJenkins', description: 'Who should I say hello to?')
                 }
             }
             environment{
