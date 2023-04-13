@@ -27,11 +27,11 @@ pipeline{
                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                 }
             }
-//            environment{
-//                MY_ENV = "${PERSON}"
-//            }
+            environment{
+                MY_ENV = env.PERSON
+            }
             when {
-                environment name: 'PERSON', value: 'omillan'
+                environment name: 'MY_ENV', value: 'omillan'
             }
             steps{
                 echo "Who proceeded = ${MY_ENV}"
