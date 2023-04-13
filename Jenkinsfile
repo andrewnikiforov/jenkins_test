@@ -16,7 +16,7 @@ pipeline{
     stages{
     	stage('Hello stage'){
             when {
-                branch 'origin/develop'
+                branch pattern: "origin/develop", comparator: "EQUALS"
             }
     	    steps{
                 sh 'printenv'
