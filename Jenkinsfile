@@ -34,7 +34,7 @@ pipeline{
 //                expression {
 //                    return env.MY_ENV != "omillan"
 //                }
-            }
+//            }
             steps{
                 sh 'printenv'
                 echo "MY_ENV = ${env.MY_ENV}"
