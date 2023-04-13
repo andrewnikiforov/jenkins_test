@@ -36,6 +36,7 @@ pipeline{
             }
             steps{
                 sh 'printenv'
+                echo "MY_ENV = ${env.MY_ENV}"
                 echo "Who proceeded = ${MY_ENV}"
                 echo "${currentBuild.number}"
             }
