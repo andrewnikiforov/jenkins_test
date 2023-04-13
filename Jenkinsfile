@@ -29,7 +29,7 @@ pipeline{
             }
 //            environment{
 //                MY_ENV = "${PERSON}"
-            }
+//            }
             when {
                 environment name: 'PERSON', value: 'omillan'
             }
