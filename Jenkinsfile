@@ -29,10 +29,11 @@ pipeline{
             environment{
                 MY_ENV = "${PERSON}"
             }
-            when {
-                expression {
-                    return env.MY_ENV != "omillan"
-                }
+            when { equals expected: 'omillan', actual: env.MY_ENV }
+//            when {
+//                expression {
+//                    return env.MY_ENV != "omillan"
+//                }
             }
             steps{
                 sh 'printenv'
