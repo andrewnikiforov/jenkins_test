@@ -29,9 +29,11 @@ pipeline{
             environment{
                 MY_ENV = "${PERSON}"
             }
-//            when {
-//                environment name: 'MY_ENV', value: 'omillan'
-//            }
+            when {
+                expression {
+                    return env.MY_ENV == 'omillan'
+                }
+            }
             steps{
                 sh 'printenv'
                 echo "Who proceeded = ${MY_ENV}"
