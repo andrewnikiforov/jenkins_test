@@ -1,4 +1,3 @@
-
 pipeline{ 
     agent{ 
         label 'masterLin'
@@ -6,23 +5,16 @@ pipeline{
     options { 
         timestamps()
     }
-// this block strted job when  second_job end in Success mode
-//    triggers{
-//        upstream (
-//            upstreamProjects: 'my_folder/second_job',
-//            threshold: hudson.model.Result.SUCCESS
-//        )
-//    }
     stages{
     	stage('Hello stage'){
-//            when { expression { return env.GIT_BRANCH == 'origin/develop'} }
-            when {
-                branch '*/develop'
-            }
+            when { not { branch 'master' } }
+//            when {
+//                branch not '*/develop'
+//            }
     	    steps{
                 sh 'printenv'
                 echo "Branch is ${env.GIT_BRANCH}"
-        		echo 'Hello world!'
+                echo 'Hello world!'
                 input 'Will you go for award?'
     	    }
     	}
