@@ -31,7 +31,7 @@ pipeline{
             }
             when {
                 expression {
-                    return env.MY_ENV == 'omillan'
+                    return env.MY_ENV != 'omillan'
                 }
             }
             steps{
