@@ -9,11 +9,10 @@ pipeline{
     	stage('Hello stage'){
             when {
                 expression{
-                    return env.GIT_BRANCH == 'origin/develop'
+                    return env.GIT_BRANCH == 'origin/developf'
                 }
             }
     	    steps{
-                sh 'printenv'
                 echo "Branch is ${env.GIT_BRANCH}"
                 echo 'Hello world!'
                 input 'Will you go for award?'
@@ -30,10 +29,11 @@ pipeline{
             environment{
                 MY_ENV = "${PERSON}"
             }
-            when {
-                environment name: 'MY_ENV', value: 'omillan'
-            }
+//            when {
+//                environment name: 'MY_ENV', value: 'omillan'
+//            }
             steps{
+                sh 'printenv'
                 echo "Who proceeded = ${MY_ENV}"
                 echo "${currentBuild.number}"
             }
