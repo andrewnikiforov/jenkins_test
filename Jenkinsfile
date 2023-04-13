@@ -36,9 +36,9 @@ pipeline{
             environment{
                 MY_ENV = "{$PERSON}"
             }
-           when {
-                environment name: 'MY_ENV', value: 'omillan'
-            }
+//           when {
+//                environment name: 'MY_ENV', value: 'omillan'
+//            }
            steps{
                echo "Who proceeded = ${PERSON}"
                echo "${currentBuild.number}"
