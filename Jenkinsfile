@@ -18,6 +18,8 @@ pipeline{
                 branch 'master'
             }
     	    steps{
+                sh 'printenv'
+                echo "Branch is ${env.GIT_BRANCH}}"
         		echo 'Hello world!'
                 input 'Will you go for award?'
     	    }
