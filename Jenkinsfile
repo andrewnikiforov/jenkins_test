@@ -14,9 +14,9 @@ pipeline{
 //    }
     stages{
     	stage('Hello stage'){
-            when {
-                branch 'develop'
-            }
+//            when {
+//                branch 'develop'
+//            }
     	    steps{
                 sh 'printenv'
                 echo "Branch is ${env.GIT_BRANCH}}"
