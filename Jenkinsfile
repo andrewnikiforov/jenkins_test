@@ -9,7 +9,7 @@ pipeline{
     	stage('Hello stage'){
             when {
                 expression{
-                    return env.$GIT_BRANCH == 'develop'
+                    return $env.GIT_BRANCH == 'develop'
                 }
             }
     	    steps{
