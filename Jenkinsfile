@@ -33,14 +33,14 @@ pipeline{
                         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
                     }
                 }
-//            environment{
-//                MY_ENV = "$PERSON"
-//            }
-//           when {
-//                environment name: 'MY_ENV', value: 'omillan'
-//            }
+            environment{
+                MY_ENV = "{$PERSON}"
+            }
+           when {
+                environment name: 'MY_ENV', value: 'omillan'
+            }
            steps{
-               echo "Who proceeded = ${PERSON}}"
+               echo "Who proceeded = ${PERSON}"
                echo "${currentBuild.number}"
             }
         }
