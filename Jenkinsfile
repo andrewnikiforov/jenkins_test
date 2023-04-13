@@ -8,7 +8,9 @@ pipeline{
     stages{
     	stage('Hello stage'){
             when {
-                branch "*/develop"
+                expression{
+                    return env.$GIT_BRANCH == 'origin/develop'
+                }
             }
     	    steps{
                 sh 'printenv'
