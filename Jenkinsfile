@@ -15,9 +15,9 @@ pipeline{
 //    }
     stages{
     	stage('Hello stage'){
-            when {
-                branch pattern: ".*dev.*", comparator: "REGEXP"
-            }
+//            when {
+//                branch pattern: ".*dev.*", comparator: "REGEXP"
+//            }
     	    steps{
                 sh 'printenv'
                 echo "Branch is ${env.GIT_BRANCH}"
