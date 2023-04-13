@@ -28,7 +28,7 @@ pipeline{
                 }
             }
             environment{
-                MY_ENV = env.$PERSON
+                MY_ENV = "${PERSON}"
             }
             when {
                 environment name: 'MY_ENV', value: 'omillan'
