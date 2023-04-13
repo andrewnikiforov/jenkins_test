@@ -15,11 +15,11 @@ pipeline{
     stages{
     	stage('Hello stage'){
 //            when {
-//                branch 'develop'
+//                branch 'origin/develop'
 //            }
     	    steps{
                 sh 'printenv'
-                echo "Branch is ${env.GIT_BRANCH}}"
+                echo "Branch is ${env.GIT_BRANCH}"
         		echo 'Hello world!'
                 input 'Will you go for award?'
     	    }
