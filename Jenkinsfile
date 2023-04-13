@@ -40,7 +40,7 @@ pipeline{
 //                environment name: 'MY_ENV', value: 'omillan'
 //            }
            steps{
-               echo "Who proceeded = ${PERSON}"
+               echo "Who proceeded = ${MY_ENV}"
                echo "${currentBuild.number}"
             }
         }
